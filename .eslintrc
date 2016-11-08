@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+
+  "env": {
+    "es6": true,
+    "node": true
+  },
+
+  "globals": {
+
+  },
+
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"],
+    "no-underscore-dangle": 2,
+    "no-unused-vars": 2
+  }
+}

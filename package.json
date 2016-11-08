@@ -1,0 +1,34 @@
+{
+  "name": "be-my-guest",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "index.js",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "test": "snyk test",
+    "start": "./bin/start",
+    "dev": "./bin/dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "chalk": "1.1.3",
+    "hapi": "15.2.0",
+    "hapi-require-https": "2.0.9",
+    "icecreambar": "3.2.0",
+    "opbeat": "3.19.3",
+    "pm2": "2.1.4",
+    "rejoice": "3.3.1",
+    "snyk": "1.19.1"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.9.1",
+    "lab": "^11.1.0"
+  },
+  "snyk": true,
+  "license": "TBD"
+}

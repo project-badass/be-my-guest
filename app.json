@@ -1,0 +1,37 @@
+{
+  "name": "be-my-guest",
+  "description": "an API server",
+  "env": {
+    "NODE_ENV": {
+      "description": "recommended to be set to \"production\"; required to activate Rollbar and NewRelic; enforces HTTPS only.",
+      "default": "production",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "",
+      "required": false
+    },
+    "OPBEAT_SECRET_TOKEN": {
+      "description": "enables/directs application metrics to OpBeat",
+      "required": false
+    },
+    "OPBEAT_ORGANIZATION_ID": {
+      "description": "enables/directs application metrics to OpBeat",
+      "required": false
+    },
+    "OPBEAT_APP_ID": {
+      "description": "enables/directs application metrics to OpBeat",
+      "required": false
+    },
+    "ROLLBAR_SERVER_ITEM_ACCESS_TOKEN": {
+      "description": "icecreambar; credential used to publish events to Rollbar",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs"}
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
