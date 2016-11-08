@@ -3,12 +3,12 @@
   "description": "an API server",
   "env": {
     "NODE_ENV": {
-      "description": "recommended to be set to \"production\"; required to activate Rollbar and NewRelic; enforces HTTPS only.",
+      "description": "recommended to be set to \"production\"; required to activate Rollbar; enforces HTTPS only.",
       "default": "production",
       "required": false
     },
     "DATABASE_URL": {
-      "description": "",
+      "description": "data store for users and such",
       "required": false
     },
     "OPBEAT_SECRET_TOKEN": {
@@ -23,8 +23,20 @@
       "description": "enables/directs application metrics to OpBeat",
       "required": false
     },
-    "ROLLBAR_SERVER_ITEM_ACCESS_TOKEN": {
+    "ROLLBAR_ACCESS_TOKEN": {
       "description": "icecreambar; credential used to publish events to Rollbar",
+      "required": false
+    },
+    "BONSAI_URL": {
+      "description": "ElasticSearch provider",
+      "required": false
+    },
+    "SENDGRID_PASSWORD": {
+      "description": "email provider password",
+      "required": false
+    },
+    "SENDGRID_USERNAME": {
+      "description": "email provider username",
       "required": false
     }
   },
@@ -32,6 +44,8 @@
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs"}
   ],
   "addons": [
-    "heroku-postgresql"
+    "heroku-postgresql",
+    "bonsai:sandbox",
+    "sendgrid:starter"
   ]
 }
