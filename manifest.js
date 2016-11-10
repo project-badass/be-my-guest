@@ -20,7 +20,7 @@ require('opbeat').start({
 
 let manifest = {
   'connections': [{
-    'port': process.env.port || 3000,
+    'port': process.env.PORT || 3000,
     'routes': {
       'security': true,
       'cors': {
@@ -52,7 +52,7 @@ let manifest = {
 
 
 if (process.env.NODE_ENV === 'production') {
-  manifest.registrations.push({ 'plugin': './node_modules/hapi-require-https' });
+  manifest.registrations.push({ 'plugin': 'hapi-require-https' });
 }
 
 
