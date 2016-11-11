@@ -46,7 +46,8 @@ let manifest = {
 
   'registrations': [
     { 'plugin': './ping' },
-    { 'plugin': './announce-server-ready' }
+    { 'plugin': './announce-server-ready' },
+    { 'plugin': './session' }
   ]
 };
 
