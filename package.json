@@ -20,6 +20,7 @@
     "hapi": "15.2.0",
     "hapi-require-https": "2.0.9",
     "icecreambar": "3.2.0",
+    "joi": "^9.2.0",
     "knex": "^0.12.6",
     "opbeat": "3.19.3",
     "pg": "^6.1.0",
